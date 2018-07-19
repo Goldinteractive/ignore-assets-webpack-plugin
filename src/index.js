@@ -2,6 +2,7 @@
 
 /**
  * @author Mehdi Lahlou <mehdi.lahlou@free.fr>
+ * @author Gold Interactive
  */
 
 import _ from 'lodash';
@@ -14,14 +15,13 @@ function IgnoreAssetsPlugin(options) {
 }
 
 IgnoreAssetsPlugin.prototype.apply = function apply(compiler) {
-	compiler.plugin('emit', (compilation, callback) => {
+	compiler.hooks.emit.tap('IgnoreAssetsPlugin', (compilation) => {
 		const compiledAssets = _.keys(compilation.assets);
 		this.ignoredAssets.forEach((element) => {
 			if (_.indexOf(compiledAssets, element) !== -1) {
 				delete compilation.assets[element];
 			}
 		});
-		callback();
 	});
 };
 
