@@ -1,6 +1,6 @@
 {
   "name": "@goldinteractive/ignore-assets-webpack-plugin",
-  "version": "2.0.1",
+  "version": "3.0.0",
   "description": "Ignore assets from compilation. Useful when you use non-js files as entry points with extract-text-webpack-plugin, and don't need the resulting empty js files.",
   "keywords": [
     "assets",
@@ -8,7 +8,7 @@
     "ignore",
     "webpack",
     "webpack-plugin",
-    "webpack2"
+    "webpack4"
   ],
   "main": "lib/index.js",
   "scripts": {
@@ -47,19 +47,19 @@
     "eslint-config-airbnb": "^14.1.0",
     "eslint-plugin-babel": "^4.0.1",
     "eslint-plugin-import": "^2.2.0",
-    "extract-text-webpack-plugin": "^2.0.0-rc.3",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "npmpub": "^3.1.0",
     "nyc": "^10.1.2",
     "regenerator-runtime": "^0.10.1",
     "rimraf": "^2.5.4",
     "style-loader": "^0.13.1",
-    "webpack": "^2.2.1"
+    "webpack": "^4.16.1"
   },
   "publishConfig": {
     "access": "public"
   },
   "peerDependencies": {
-    "webpack": ">=2.2.0"
+    "webpack": ">=4.16.1"
   },
   "ava": {
     "files": [
